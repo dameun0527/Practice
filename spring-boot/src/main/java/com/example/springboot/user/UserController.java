@@ -17,4 +17,10 @@ public class UserController {
         UserResponseDto res = new UserResponseDto(user.getId(), user.getUsername());
         return new ResponseEntity<>(res, HttpStatus.CREATED);
     }
+
+    @GetMapping("/user/{id}")
+    public ResponseEntity<UserResponseDto> getUsers(@PathVariable Long id) {
+        UserResponseDto res = userService.getUser(id);
+        return new ResponseEntity<>(res, HttpStatus.OK);
+    }
 }
