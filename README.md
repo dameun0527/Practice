@@ -25,6 +25,7 @@
 - **H2 in‑memory**  (dev) / MySQL 8 (docker‑compose)
 - **Lombok**, **MapStruct**  (code generation)
 - **JUnit 5**  ·  **AssertJ**  (test)
+- **[Notion](https://www.notion.so/1ca981230d5b8060ba24e78379f20365)**
 
 ---
 
