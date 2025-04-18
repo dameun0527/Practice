@@ -16,4 +16,12 @@ public class UserService {
         return userRepository.save(user);
     }
 
+    public UserResponseDto getUser(Long id) {
+        Optional<User> user = userRepository.findById(id);
+        if (user.isPresent()) {
+            return new UserResponseDto(user.get().getId(), user.get().getUsername());
+        } else {
+            throw new RuntimeException("User not found");
+        }
+    }
 }
